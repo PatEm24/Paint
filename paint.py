@@ -1,5 +1,6 @@
-#Repositorio creado por ¨Patricio Hernández
+#Repositorio creado por Patricio Hernández
 #Modificado por Othón Berlanga
+#Modificado por Sergio Morales
 
 from turtle import *
 
@@ -40,13 +41,32 @@ def circles(start, end):
     end_fill()
 
 def rectangle(start, end):
-    """Draw rectangle from start to end."""
-    pass  # TODO
+    "Draw rectangle from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
 
+    for count in range(2):
+        forward(end.x - start.x)
+        left(90)
+        forward((end.x - start.x)/2)
+        left(90)
+
+    end_fill()
 
 def triangle(start, end):
-    """Draw triangle from start to end."""
-    pass  # TODO
+    "Draw triangle from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+
+    end_fill()
 
 
 def tap(x, y):
